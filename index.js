@@ -9,8 +9,9 @@ app.set('view engine', 'html');
 
 var router = express.Router();
 
-var val = pvs.get("~/Fourth/Fall/4312/4312-labs/Lab2/4312-lab2/top.pvs");
-console.log(val);
+var val = pvs.get(
+  // path to top.summary
+);
 
 router.get('/', function(req, res, next) {
   var full = val == 100 ? true : false;
