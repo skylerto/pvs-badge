@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "4.13.3",
-    "pvs-proofs": "0.1.0"
+    "hogan-express": "0.5.2",
+    "pvs-proofs": "0.1.5"
   }
 }

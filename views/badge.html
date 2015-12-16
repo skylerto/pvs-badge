@@ -1,0 +1,36 @@
+<svg height="20" width="125" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <linearGradient id="a" x2="0" y2="100%">
+        <stop offset="0" stop-color="#fff" stop-opacity=".7"></stop>
+        <stop offset=".1" stop-color="#aaa" stop-opacity=".1"></stop>
+        <stop offset="1" stop-opacity=".5"></stop>
+  </linearGradient>
+
+  <rect fill="#555" height="20" rx="3" width="125"></rect>
+  <rect fill="{{color}}" height="20" rx="3" width="45" x="81"></rect>
+
+  <rect fill="url(#a)" height="20" rx="3" width="125"></rect>
+
+  <g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11" text-anchor="middle">
+    <a id="link" target="_new" xlink:href="{{url}}">
+      <% # Shadow %>
+      <text fill="#010101" fill-opacity=".3" x="39.5" y="15">
+        Specification
+      </text>
+      <% # Actual button text %>
+      <text fill="#<%= opts[:color] %>" x="39.5" y="14">
+        Specification
+      </text>
+    </a>
+
+    <a id="count-link" target="_new"  xlink:href="{{url}}">
+      <% # Shadow %>
+      <text fill="#010101" fill-opacity=".3" id="count" x="101.5" y="15">
+        {{val}}%
+      </text>
+      <% # Actual count text %>
+      <text fill="#<%= opts[:color] %>" id="count" x="101.5" y="14">
+        {{val}}%
+      </text>
+    </a>
+  </g>
+</svg>
